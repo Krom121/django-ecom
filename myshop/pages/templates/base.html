@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +11,17 @@
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="{% url 'index' %}">Myshop</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Myshop</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item active">
-            <a class="nav-link" href="{% url 'index' %}">Home</a>
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="{% url 'product_list' %}">Shop</a>
+            <a class="nav-link" href="/">Shop</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="{% url 'about' %}">About us</a>
@@ -35,17 +36,17 @@
     {% block content %}
     {% endblock %}
     <footer class="footer container-fluid">
-       <div class="row">
+       <div class="row justify-content">
           <div class="col-md-6">
                 <ul class="footer_nav">
                     <li class="footer_item">
                         <a href="" class="footer_link"></a>
                     </li>
                     <li class="footer_item">
-                        <a href="{% url 'index' %}" class="footer_link">Home</a>
+                        <a href="{% url 'home' %}" class="footer_link">Home</a>
                     </li>
                     <li class="footer_item">
-                        <a href="{% url 'product_list' %}" class="footer_link">Shop</a>
+                        <a href="/" class="footer_link">Shop</a>
                     </li>
                     <li class="footer_item">
                         <a href="{% url 'about' %}" class="footer_link">About us</a>
