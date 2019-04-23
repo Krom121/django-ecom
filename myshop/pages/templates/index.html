@@ -3,12 +3,12 @@
 {% block content %}
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <h1 class="heading-primary">shirts 4 u</h1>
+        <p class="sub-heading">coolest t-shirts in the world</p>
     </div>
 </div>
-<section class="featured container">
-    <h2>Featured products</h2>
+<h2 class="heading--secondary">Featured products</h2>
+<section class="featured-section container">
     <div class="row">
 <div class="col-sm-4">
         <img class="img-fluid" src="{% static 'img/Astronaut_300x300.jpg' %}">
@@ -24,19 +24,28 @@
 </section>
 
 <section class="about-section container">
-    <h2>About us</h2>
-<div class="row">
-<div class="col-md-12">
-
-</div>
-</div>
-</section>
-
-<section class="bog-section container">
-    <h2>Read our blogs</h2>
+    <h2 class="heading--secondary">About us</h2>
     <div class="row">
         <div class="col-md-12">
-        
+            <p class="landing-text">Shout-out to the T-shirts and vests in our wardrobes 
+                for being the most wearable pieces going. 
+                Live in logos by copping styles 
+                from adidas Originals and Fred Perry, 
+                or check out our very own designed 
+                T-shirts for both bold prints and 
+                investment multipacks.
+            </p>
+
+            <a href="{% url 'about' %}" class="btn--about">Find out more</a>
+        </div>
+    </div>
+</section>
+
+<section class="blog-section container">
+    <h2 class="heading--secondary">Read our blogs</h2>
+    <div class="row">
+        <div class="col-md-12">
+            
         </div>
     </div>
 </section>

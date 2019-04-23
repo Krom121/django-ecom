@@ -1,0 +1,133 @@
+/*
+
+In the css file i have split up all the styles into sections
+for example all the buttons with buttons.
+This is to make finding and changing any styles easier.
+
+*/
+
+
+    /*  Base CSS   */
+
+html{
+    font-size: 62%;
+}
+
+body{
+    box-sizing: border-box;
+    color: #344;
+    
+}
+
+    /* Navs and Navbar */
+
+.navbar ul li a{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+
+.navbar-toggler{
+    font-size: 2.5rem;
+}
+
+.sidebar {
+    font-size: 2rem;
+    color: #344;
+}
+
+.sidebar ul{
+    list-style-type: none;
+}
+
+.sidebar li{
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.sidebar a{
+    color: #344;
+    text-decoration: none;
+}
+
+
+    /* Typography for the website headings and fonts */
+
+.heading-primary{
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 2.5rem;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+.sub-heading{
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+}
+
+.heading--secondary{
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin: 5rem; 
+}
+
+.landing-text{
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+    /* Sections of the landing page */
+
+.featured-section{
+    padding: 10rem 0;
+}
+
+.about-section{
+    padding: 10rem 0;
+}
+
+.blog-section{
+    padding: 10rem 0;
+}
+
+/*
+
+This part is for all the buttons to the website.
+
+*/
+
+.btn--about{
+    width: 45%;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1.5rem 4rem;
+    margin: 6rem auto;
+    display: block;
+    border-radius: 10rem;
+    transition: all .2s;
+    background-color: rgba(30, 196, 15, 0.068);
+    color: #344;
+}
+
+.btn--about:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+    text-decoration: none;
+    color: #344;
+}
+
+.btn--about:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+}
