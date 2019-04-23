@@ -1,3 +1,43 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+</div>
+<section class="featured container">
+    <h2>Featured products</h2>
+    <div class="row">
+<div class="col-sm-4">
+        <img class="img-fluid" src="{% static 'img/Astronaut_300x300.jpg' %}">
+</div>
+<div class="col-sm-4">
+        <img class="img-fluid" src="{% static 'img/Astronaut_300x300.jpg' %}">
+</div>
+<div class="col-sm-4">
+        <img class="img-fluid" src="{% static 'img/Astronaut_300x300.jpg' %}">
+</div>
+</div>
+</div>
+</section>
+
+<section class="about-section container">
+    <h2>About us</h2>
+<div class="row">
+<div class="col-md-12">
+
+</div>
+</div>
+</section>
+
+<section class="bog-section container">
+    <h2>Read our blogs</h2>
+    <div class="row">
+        <div class="col-md-12">
+        
+        </div>
+    </div>
+</section>
 {% endblock %}
