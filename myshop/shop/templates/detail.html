@@ -4,15 +4,26 @@
   {{ product.name }}
 {% endblock %}
 {% block content %}
-<div class="product-detail">
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+    <div class="col-md-6">
+        <img src="{{ product.image.url }}">
+    </div>
+    <div class="col-md-5">
+        <h1>{{ product.name }}</h1>
+        <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+        <p class="price">${{ product.price }}</p>
+        {{ product.description|linebreaks }}
 
-    <img src="{{ product.image.url }}">
-    
-  
-    <h1>{{ product.name }}</h1>
-    <h2><a href="{{ product.category.get_absolute_url }}">{{ 
-    product.category }}</a></h2>
-    <p class="price">${{ product.price }}</p>
-    {{ product.description|linebreaks }}
+    </div>
+   
+ 
+  </div>
   </div>
 {% endblock %}
