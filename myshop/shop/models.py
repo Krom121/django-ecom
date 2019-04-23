@@ -1,6 +1,14 @@
 from django.db import models
 from django.urls import reverse
 
+
+"""
+
+Below is the model for the product category. This also includes the
+absolute url for more humanize urls when end user is viewing the products.
+This will also allow for products to organized into different categories.
+
+"""
 class Category(models.Model):
     name = models.CharField(max_length=200,
                             db_index=True)
@@ -19,7 +27,13 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+"""
+Below is the model for the products with absolute url for humanized urls.
+The foreign key is used to build the relationship between the category and product.
+By using index_together in the meta class i can improve the performance of 
+the quieries that will be used in the views.py.
 
+"""
 
 class Product(models.Model):
     category = models.ForeignKey(Category,
