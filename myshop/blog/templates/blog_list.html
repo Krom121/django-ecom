@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="heading-primary">Fluid jumbotron</h1>
+      <p class="sub-heading">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+{% for post in posts %}
+    <h2 class="sub-heading">
+        <a href="{{ post.get_absoulte_url }}">
+            {{ post.title }}
+        </a>
+    </h2>
+    <p>
+        Published {{ post.published }} by {{ post.author }}
+    </p>
+    <p>
+        {{ post.body|truncatewords:30|linebreaks }}
+    </p>
+{% endfor %}
+{% endblock %}

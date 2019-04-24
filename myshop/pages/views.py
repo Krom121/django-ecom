@@ -14,3 +14,6 @@ def contact(request):
 
 def product_list(request):
     return render(request, 'list.html', {'title': 'Shop'})
+
+def post_list(request):
+    return render(request, 'blog_list.html', {'title': 'blog'})
