@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 
+
 """
 
 Below is the model for the product category. This also includes the
