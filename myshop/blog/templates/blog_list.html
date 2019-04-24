@@ -9,15 +9,14 @@
   </div>
 {% for post in posts %}
     <h2 class="sub-heading">
-        <a href="{{ post.get_absoulte_url }}">
+        <a href="{{ post.get_absolute_url }}">
             {{ post.title }}
         </a>
     </h2>
-    <p>
+    <p class="heading-tertiary">
         Published {{ post.published }} by {{ post.author }}
     </p>
-    <p>
+    
         {{ post.body|truncatewords:30|linebreaks }}
-    </p>
 {% endfor %}
 {% endblock %}

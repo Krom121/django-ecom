@@ -89,6 +89,7 @@ body{
     font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: 0.5rem;
+    margin: 5rem;
 }
 
 .heading--secondary{
@@ -107,6 +108,11 @@ body{
 }
 
 .landing-text{
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.post-text{
     font-size: 1.7rem;
     text-align: center;
 }
