@@ -1,6 +1,13 @@
 from django.contrib import admin
 from .models import Post
 
+"""
+Below is the registration of the post model. In admin model has been used
+for the django admin site. This model will display posts different
+view in the django admin site.
+
+"""
+
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'author', 'status')
