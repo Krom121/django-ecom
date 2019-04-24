@@ -23,7 +23,8 @@ body{
 
 .navbar ul li a{
     font-size: 2rem;
-    text-align: center;
+    text-transform: uppercase;
+    margin-left: 5rem;
 }
 
 .navbar-brand{
@@ -35,22 +36,40 @@ body{
 }
 
 .sidebar {
+    height: 25%;
     font-size: 2rem;
     color: #344;
+    transition: all .2s;
 }
 
 .sidebar ul{
     list-style-type: none;
+    transition: all .2s;
 }
 
 .sidebar li{
     padding: 1rem;
     margin: 0.5rem;
+    transition: all .2s;
 }
 
 .sidebar a{
     color: #344;
     text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    transition: all .2s;
+}
+
+.sidebar a:hover{
+    color: green;
+    transform: translateY(-.5rem);
+    text-shadow: 0 1rem 3rem rgba(0,0,0, .5);
+}
+
+.sidebar a:active{
+    transform: translateY(.2rem);
+    text-shadow: 0 2rem 4rem rgba(0,0,0, .2);
 }
 
 
@@ -78,6 +97,13 @@ body{
     text-align: center;
     font-weight: 700;
     margin: 5rem; 
+}
+
+.heading-tertiary{
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 5rem;
 }
 
 .landing-text{
@@ -130,4 +156,12 @@ This part is for all the buttons to the website.
 .btn--about:active{
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+}
+
+    /* Images for the website */
+
+.product-image{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
 }
