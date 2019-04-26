@@ -4,17 +4,17 @@
 {% block content %}
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="heading-primary">Fluid jumbotron</h1>
-      <p class="sub-heading">This is a modified </p>
+      <h1 class="heading-primary">Shirts4u</h1>
+      <p class="sub-heading">Grab your amazing t-shirt</p>
     </div>
   </div>
-  <div class="cart">
+  <div class="list_cart">
     {% with total_items=cart|length %}
         {% if cart|length > 0 %}
           Your cart: 
-          <a href="{% url "cart:cart_detail" %}">
+          <a class="list-cart_link" href="{% url 'cart:cart_detail' %}">
             {{ total_items }} item{{ total_items|pluralize }},
-            ${{ cart.get_total_price }}
+            &pound;{{ cart.get_total_price }}
           </a>
         {% else %}
           Your cart is empty.
@@ -50,7 +50,7 @@
         </a>
         <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
         <br>
-        ${{ product.price }}
+        &pound;{{ product.price }}
       </div>
     {% endfor %}
     </div>

@@ -112,6 +112,22 @@ body{
     text-align: center;
 }
 
+.product-heading{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 1.5rem;
+}
+
+.product-text{
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.product-price{
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
 .post-text{
     font-size: 1.7rem;
     text-align: center;
@@ -164,10 +180,64 @@ This part is for all the buttons to the website.
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
 }
 
+/*  PRODUCT CARDS AND ITEMS cart on product list template */
+
+.item{
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    transition: all .4s;
+    border-radius: 3px;
+}
+
+.item:hover{
+    transform: translateY(-1rem) scale(1);
+    box-shadow: 0 2rem 3rem rgba(0,0,0, .6);
+}
+
+.list_cart{
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bolder
+}
+
+.list-cart_link{
+    text-decoration: none;
+    color: #344;
+}
+
+.list-cart_link:hover{
+    text-decoration: none;
+    color: #5a5;
+
+}
+
+.list-cart_link:visited{
+    color: red;
+    text-decoration: underline;
+}
+
     /* Images for the website */
 
 .product-image{
     width: 100%;
     height: auto;
     border-radius: 3px;
+}
+
+.product-img_detail{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+/* For all the forms of the website */
+
+.product-quanity{
+    font-size: 1.6rem;
+    padding: .5rem;
+    margin: .8rem;
 }
