@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'orders',
     'cart',
+    'paypal.standard.ipn',
+    'payment',
     
 ]
 
@@ -133,3 +135,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CART_SESSION_ID = 'cart'
+
+# django-paypal settings paypal_receiver email
+
+PAYPAL_RECEIVER_EMAIL = 'r.harlock@ntlworld.com'
+PAYPAL_TEST = True
