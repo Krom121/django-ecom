@@ -17,3 +17,6 @@ def product_list(request):
 
 def post_list(request):
     return render(request, 'blog_list.html', {'title': 'blog'})
+
+def register(request):
+    return render(request, 'users/register.html', {'title': 'register'})
