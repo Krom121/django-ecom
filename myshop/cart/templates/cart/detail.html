@@ -28,8 +28,7 @@
                 <input class="btn btn-success btn-lg" type="submit" value="Update">
                 {% csrf_token %}
               </form></td>
-            <td><a class=" btn btn-danger btn-lg" href="{% url 'cart:cart_remove' product.id 
-            %}">Remove</a></td>
+            <td><a class=" btn btn-danger btn-lg" href="{% url 'cart:cart_remove' product.id %}">Remove</a></td>
             <td class="num">&pound;{{ item.price }}</td>
             <td class="num">&pound;{{ item.total_price }}</td>
          
