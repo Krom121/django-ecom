@@ -2,12 +2,13 @@
 {% load static %}
 
 {% block content %}
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid jumbo_2">
     <div class="container">
       <h1 class="heading-primary">Shirts4u</h1>
       <p class="sub-heading">Grab your amazing t-shirt</p>
     </div>
   </div>
+
   <div class="list_cart">
     {% with total_items=cart|length %}
         {% if cart|length > 0 %}
@@ -21,8 +22,8 @@
         {% endif %}
       {% endwith %}
     </div>
-<div class="container">
-  <div class="row">
+    <div class="container">
+        <div class="row">
     <div class="col-md-4">
   <div class="sidebar">
     <h3 class="heading-tertiary">Categories</h3>
@@ -38,8 +39,7 @@
     </ul>
   </div>
 </div>
-<div class="col-md-4"></div>
-<div class="col-md-4">
+<div class="col-md-6">
   <div id="main" class="product-list">
     <h2 class="heading--secondary">{% if category %}{{ category.name }}{% else %}shirts
     {% endif %}</h2>
@@ -54,7 +54,7 @@
       </div>
     {% endfor %}
     </div>
-  </div>
+</div>
 </div>
 </div>
 {% endblock %}

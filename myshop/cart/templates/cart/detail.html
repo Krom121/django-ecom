@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid jumbo_4">
     <div class="container">
       <h1 class="sub-heading">Your shopping cart</h1>
       <p class="sub-heading">{{ product.name }}</p>
     </div>
   </div>
+  <div class="table-responsive-md">
   <table class="table table-sm table-hover">
     <tbody>
      
@@ -38,15 +39,15 @@
       <tr class="total">
         <td>Total</td>
         <td colspan="4"></td>
-        <td class="num">&pound;{{ cart.get_total_price }}</td>
+        <td class="lead mb-0">&pound;{{ cart.get_total_price }}</td>
 
       </tr>
     </tbody>
   </table>
+  </div>
   <p class="text-right">
-    <a href="{% url 'shop:product_list' %}" class="button 
-    light">Continue shopping</a>
-    <a href="{% url 'orders:order_create' %}" class="button">
+    <a href="{% url 'shop:product_list' %}" class="mr-md-5 btn btn-outline-info btn-lg">Continue shopping</a>
+    <a href="{% url 'orders:order_create' %}" class="mr-md-5 btn btn-outline-success btn-lg">
       Checkout
     </a>
   </p>

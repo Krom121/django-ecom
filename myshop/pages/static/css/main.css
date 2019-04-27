@@ -16,7 +16,9 @@ html{
 body{
     box-sizing: border-box;
     color: #344;
-    
+    background-color: #eee;
+    overflow-x: hidden;
+    font-size: 1.6;
 }
 
     /* Navs and Navbar */
@@ -83,6 +85,10 @@ body{
     backface-visibility: hidden;
     margin-bottom: 5rem;
     margin-top: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
 }
 
 .sub-heading{
@@ -90,6 +96,10 @@ body{
     font-weight: 700;
     letter-spacing: 0.5rem;
     margin: 5rem;
+    position: absolute;
+    left: 47%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .heading--secondary{
@@ -107,9 +117,28 @@ body{
     margin: 5rem;
 }
 
+.blog-heading{
+    font-size: 4rem;
+    font-weight: 500;
+    color: #344;
+    padding: 1rem;
+    margin: 3rem;
+}
+
+.blog-heading a:hover {
+    text-decoration: none;
+    color: #5a5;
+}
+
+.blog-list-text{
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
 .landing-text{
     font-size: 1.7rem;
-    text-align: center;
 }
 
 .product-heading{
@@ -133,18 +162,86 @@ body{
     text-align: center;
 }
 
+.blog-detail-text{
+    font-size: 1.6rem;
+}
+
     /* Sections of the landing page */
 
 .featured-section{
     padding: 10rem 0;
+    position: relative;
+}
+
+.featured-section:hover .feature_img{
+    opacity: 0.3;
+}
+
+.featured-section:hover .feature-btn{
+    opacity: 1;
 }
 
 .about-section{
     padding: 10rem 0;
+    background-image: linear-gradient(to bottom left,
+    rgba(209,209,209, 1), 
+    rgba(182,182,182, 0.6));
+    -webkit-clip-path: polygon(0 6%, 100% 1%, 100% 95%, 0% 100%);
+    clip-path: polygon(0 6%, 100% 1%, 100% 95%, 0% 100%);
 }
 
 .blog-section{
     padding: 10rem 0;
+}
+
+/*
+    Jumbotron css for all the jubotrons
+*/
+
+.jumbo_1{
+    height: 70vh;
+    background-image: linear-gradient(to bottom left,
+    rgba(209,209,209, 0.7), 
+    rgba(194,201,196, 0.9)), 
+    url(../img/t-shirts-home.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.jumbo_2{
+    height: 70vh;
+    background-image: linear-gradient(to bottom left,
+    rgba(209,209,209, 0.7), 
+    rgba(194,201,196, 0.9)), 
+    url(../img/believe-shop-list.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.jumbo_3{
+    height: 50vh;
+    position: relative;
+}
+
+.jumbo_4{
+    height: 20vh;
+    position: relative;
+}
+
+.jumbo_5{
+    height: 50vh;
+    background-image: linear-gradient(to bottom left,
+    rgba(209,209,209, 0.7), 
+    rgba(194,201,196, 0.9)), 
+    url(../img/dawn-3846778_640.jpg);
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+}
+
+.jumbo_6{
+    height: 40vh;
+    position: relative;
 }
 
 /*
@@ -154,12 +251,12 @@ This part is for all the buttons to the website.
 */
 
 .btn--about{
-    width: 45%;
+    width: 100%;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     font-size: 1.6rem;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 2rem;
     margin: 6rem auto;
     display: block;
     border-radius: 10rem;
@@ -178,6 +275,32 @@ This part is for all the buttons to the website.
 .btn--about:active{
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+}
+
+.feature-btn{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;  
+}
+
+.feature_link{
+    background-color: #fff;
+    color: #344;
+    font-size: 1.2rem;
+    padding: 1.5rem 1.4rem;
+    border-radius: 10rem;
+    text-transform: uppercase;
+}
+
+.feature_link:hover{
+    background-color: #8c7;
+    color: #eee;
+    text-decoration: none;
 }
 
 /*  PRODUCT CARDS AND ITEMS cart on product list template */
@@ -225,11 +348,28 @@ This part is for all the buttons to the website.
     width: 100%;
     height: auto;
     border-radius: 3px;
+    display: block;
 }
 
 .product-img_detail{
-    width: 30%;
+    width: 20%;
     display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.feature_img{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.blog-landing-img{
+    display: block;
+    width: 85%;
     margin: 0 auto;
     border-radius: 3px;
 }
@@ -240,4 +380,29 @@ This part is for all the buttons to the website.
     font-size: 1.6rem;
     padding: .5rem;
     margin: .8rem;
+}
+
+/*  Blog styles for blog list and blog detail pages    */
+
+.blog-list{
+    text-align: center;
+}
+
+.date{
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+/*  Pagination styles */
+
+.pagination{
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 3rem;
+}
+
+.step-links{
+    text-align: center;
 }

@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid jumbo_5">
     <div class="container">
-      <h1 class="heading-primary">Fluid jumbotron</h1>
-      <p class="sub-heading">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      <h1 class="heading-primary">Our Blogs</h1>
+      <p class="sub-heading"></p>
     </div>
   </div>
 {% for post in posts %}
-    <h2 class="sub-heading">
+<div class="blog-list">
+    <h2 class="blog-heading">
         <a href="{{ post.get_absolute_url }}">
             {{ post.title }}
         </a>
@@ -16,8 +17,10 @@
     <p class="heading-tertiary">
         Published {{ post.published }} by {{ post.author }}
     </p>
-    
+    </div>
+    <div class="blog-list-text">
         {{ post.body|truncatewords:30|linebreaks }}
+    </div>
 {% endfor %}
 {% include "pagination.html" with page=page_obj %}
 {% endblock %}
