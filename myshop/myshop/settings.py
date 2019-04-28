@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'cart',
     'payment',
     'users',
+    'crispy_forms',
     
 ]
 
@@ -124,3 +125,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CART_SESSION_ID = 'cart'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

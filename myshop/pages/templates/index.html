@@ -7,6 +7,15 @@
         <p class="sub-heading">coolest t-shirts in the world</p>
     </div>
 </div>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="lead alert alert-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+
 <h2 class="heading--secondary">Featured products</h2>
 <section class="featured-section container">
     <div class="row">
