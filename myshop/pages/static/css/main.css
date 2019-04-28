@@ -27,6 +27,23 @@ body{
     margin: 10rem;
 }
 
+footer{
+    height: 30vh;
+    background-color: #344;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.copyright{
+    font-size: 1.6rem;
+    color: #eee;
+    text-align: center;
+    padding: 2rem;
+    display: inline-block;
+    margin: 0 auto;
+    width: 80%;
+}
+
     /* Navs and Navbar */
 
 .navbar ul li a{
@@ -44,7 +61,6 @@ body{
 }
 
 .sidebar {
-    height: 25%;
     font-size: 2rem;
     color: #344;
     transition: all .2s;
@@ -56,7 +72,7 @@ body{
 }
 
 .sidebar li{
-    padding: 1rem;
+    padding: 0.2rem;
     margin: 0.5rem;
     transition: all .2s;
 }
@@ -80,13 +96,41 @@ body{
     text-shadow: 0 2rem 4rem rgba(0,0,0, .2);
 }
 
+.footer_nav{
+    font-size: 1.6rem;
+    padding: 2rem;
+    display: inline-block;
+    list-style: none;
+}
+
+.footer_item{
+    display: inline-block;
+}
+
+.footer_item:not(:last-child){
+    margin-right: 1.2rem;
+}
+
+.footer_link:visited {
+    color: #eee;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.footer_link:hover{
+    color: #eee;
+    text-decoration: none;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .4);
+}
 
     /* Typography for the website headings and fonts */
 
 .heading-primary{
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 500;
-    letter-spacing: 2.5rem;
+    letter-spacing: 1.5rem;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 5rem;
@@ -98,9 +142,9 @@ body{
 }
 
 .sub-heading{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     margin: 5rem;
     position: absolute;
     left: 47%;
@@ -225,7 +269,7 @@ body{
 }
 
 .jumbo_3{
-    height: 50vh;
+    height: 30vh;
     position: relative;
 }
 
