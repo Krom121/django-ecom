@@ -1,3 +1,24 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
+<div class="container">
+        <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="force">
+                    <div class="force">
+                            <form class="register-form" method="POST">
+                                {% csrf_token %}
+                                <fieldset class="form-group">
+                                    <legend class="border-bottom mb-4">Contact Us</legend>
+                                    {{ form | crispy }}
+                                </fieldset>
+                                <div class="form-group">
+                            <button class="btn btn-outline-info btn-lg" type="submit">Get In Touch</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
