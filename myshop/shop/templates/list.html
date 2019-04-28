@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% block title %}
+  {% if category %}{{ category.name }}
+  {% else %}Products
+  {% endif %}
+{% endblock %}
 {% block content %}
 <div class="jumbotron jumbotron-fluid jumbo_2">
     <div class="container">

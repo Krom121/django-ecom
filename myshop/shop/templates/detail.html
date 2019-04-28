@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+  {{ product.name }}
+{% endblock %}
+
 {% block content %}
 <div class="jumbotron jumbotron-fluid jumbo_3">
     <div class="container">
