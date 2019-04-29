@@ -65,3 +65,43 @@ All forms where tested when built, before saving data to the database. When the 
 Once this was done i added the form errors for validation. Then re-tested the forms to see the validation in place. Flash messages where used to inform the user of what is happening.
 
 ## Testing.py
+
+```python  
+class TestViews(TestCase):
+
+    def test_product_list_GET(self):
+        client = Client()
+        response = client.get(reverse('shop:product_list'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'list.html')
+
+
+class TestUrls(SimpleTestCase):
+
+    def test_post_list_url_is_resolves(self):
+        url = reverse('blog:post_list')
+        self.assertEquals(resolve(url).func.view_class, PostListView)
+
+class TestUrls(SimpleTestCase):
+
+        def test_home_url_is_resolves(self):
+        url = reverse('home')
+        self.assertEquals(resolve(url).func, index)
+
+        def test_contact_url_is_resolves(self):
+        url = reverse('contact')
+        self.assertEquals(resolve(url).func, contact)
+
+        def test_product_list_url_is_resolves(self):
+        url = reverse('shop')
+        self.assertEquals(resolve(url).func, product_list)
+
+class TestViews(TestCase):
+
+        def test_product_list_GET(self):
+        client = Client()
+        response = client.get(reverse('shop:product_list'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'list.html')
+
+```

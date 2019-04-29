@@ -28,6 +28,7 @@ retrieve a product. The id is a unique attribute. The slug will provide humanize
 and seo friendly urls.
 
 """
+
 def product_detail(request, id, slug):
     product = get_object_or_404(Product,
                                 id=id,
@@ -36,6 +37,7 @@ def product_detail(request, id, slug):
     return render(request,
                   'detail.html',
                   {'product': product})
+                  
 
 def product_detail(request, id, slug):
     product = get_object_or_404(Product, id=id,
