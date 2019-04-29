@@ -1,6 +1,11 @@
 from django.db import models
 from shop.models import Product
 
+"""
+
+Below is the models for orders that will be created by the end user
+
+"""
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)

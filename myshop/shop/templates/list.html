@@ -15,6 +15,11 @@
     </div>
   </div>
 
+<!-- Below is the items that have been added to a cart this code will
+    show the total amount in pounds and how many items 
+    using with conditional
+  -->
+
   <div class="list_cart">
     {% with total_items=cart|length %}
         {% if cart|length > 0 %}
@@ -27,6 +32,7 @@
           Your cart is empty.
         {% endif %}
       {% endwith %}
+
     </div>
     <div class="container">
         <div class="row">
@@ -35,10 +41,16 @@
     <h3 class="heading-tertiary">Categories</h3>
     <ul>
       <li>
+
+        <!-- this button is to grab all products in the database and diplay them. -->
+
         <a href="{% url 'shop:product_list' %}">All products</a>
       </li>
       {% for c in categories %}
         <li>
+
+          <!-- absolute url url of product category -->
+
           <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
         </li>
       {% endfor %}
@@ -51,6 +63,7 @@
     {% endif %}</h2>
     {% for product in products %}
       <div class="item">
+        
         <a href="{{ product.get_absolute_url }}">
             <img class="product-image" src="{{ product.image.url }}">
         </a>

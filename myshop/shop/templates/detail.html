@@ -5,31 +5,61 @@
   {{ product.name }}
 {% endblock %}
 
+<!--
+   below is the product detail page that allows users to see 
+the product they are interested in from here a user can add a 
+product the cart 
+ -->
+
 {% block content %}
 <div class="jumbotron jumbotron-fluid jumbo_3">
     <div class="container">
       <h1 class="heading-primary">Shirts4u</h1>
+
+      <!-- below getting product name -->
+
       <p class="sub-heading">{{ product.name }}</p>
     </div>
   </div>
   <div class="container">
     <div class="row">
     <div class="col-md-6">
+      <!-- getting the product image -->
         <img src="{{ product.image.url }}">
     </div>
     <div class="col-md-5">
+
+       <!-- below getting product name -->
+
         <h2 class="product-heading">{{ product.name }}</h2>
+
+        <!-- getting the product category with absolute url -->
+
         <h3 class="product-heading "><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h3>
        <div class="product-text">
+
+        <!-- Product description -->
+
         {{ product.description|linebreaks }}
         </div>
 
+              <!-- Product price -->
+
         <p class="product-price">&pound;{{ product.price }}</p>
+
+
+        <!-- The form below is the add product to cart button users can also 
+              add how many of a item they wish to buy 
+            
+        -->
         <form action="{% url 'cart:cart_add' product.id %}" method="post">
           <div class="product-quanity">
           {{ cart_product_form }}
           </div>
           {% csrf_token %}
+
+          <!-- Add to cart button -->
+          
           <input class="btn btn-primary btn-lg" type="submit" value="Add to cart">
         </form>
 

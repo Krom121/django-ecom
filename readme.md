@@ -84,24 +84,43 @@ class TestUrls(SimpleTestCase):
 
 class TestUrls(SimpleTestCase):
 
-        def test_home_url_is_resolves(self):
+    def test_home_url_is_resolves(self):
         url = reverse('home')
         self.assertEquals(resolve(url).func, index)
 
-        def test_contact_url_is_resolves(self):
+    def test_contact_url_is_resolves(self):
         url = reverse('contact')
         self.assertEquals(resolve(url).func, contact)
 
-        def test_product_list_url_is_resolves(self):
+    def test_product_list_url_is_resolves(self):
         url = reverse('shop')
         self.assertEquals(resolve(url).func, product_list)
 
 class TestViews(TestCase):
 
-        def test_product_list_GET(self):
+    def test_product_list_GET(self):
         client = Client()
         response = client.get(reverse('shop:product_list'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'list.html')
+
+
+class TestForms(SimpleTestCase):
+
+    def test_register_form_valid_data(self):
+        form = UserRegisterForm(data={
+            'username': 'stephen',
+            'email': 'stephen@gmail.com'
+
+        })
+
+        self.assertTrue(form.is_valid())
+
+    def test_register_form_no_data(self):
+        form = UserRegisterForm(data={})
+
+        self.assertFalse(form.is_valid())
+
+        self.assertEquals(len(form.errors), 3)
 
 ```

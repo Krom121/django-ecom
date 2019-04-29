@@ -3,6 +3,12 @@ from .models import OrderItem
 from .forms import OrderCreateForm
 from cart.cart import Cart
 
+"""
+
+below is the order creation form for the check out process
+
+"""
+
 def order_create(request):
     cart = Cart(request)
     if request.method == 'POST':
